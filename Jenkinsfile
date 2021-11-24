@@ -8,7 +8,7 @@ pipeline{
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/bhavanisollu/springapp-deploy-jenkins.git']]])
             
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"    
+                bat "mvn -Dmaven.test.failure.ignore=true package"    
             }
         }
         stage('Build Docker Image') {
