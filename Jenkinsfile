@@ -34,11 +34,11 @@ pipeline{
                      // kubernetesDeploy(configs:"deploymentAndService.yaml" , kubeconfigId : "jenkins-deploy-kubernetes-id")
                     
                     try{
-                    bat 'kubectl apply -f configmap.yaml --validate=false'
+                    //bat 'kubectl apply -f configmap.yaml --validate=false'
                     bat 'kubectl apply -f deployment.yaml --validate=false'
                     }
                     catch(error){
-                    bat 'kubectl create -f configmap.yaml --validate=false'
+                    //bat 'kubectl create -f configmap.yaml --validate=false'
                     bat 'kubectl create -f deployment.yaml --validate=false'
                     }  
                 }
