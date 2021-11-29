@@ -4,9 +4,12 @@ metadata :
   name : springboot-config-map
   namespace : kube-system
 data :
-  mapRoles :
+  mapRoles : |
     - rolearn : arn:aws:eks:ap-south-1:022929194919:nodegroup/jenkins-deploy/worker-node-grp/90bea70f-d025-a0ae-e6db-762ec506ac7b
       username : system:node:{{EC2PrivateDNSName}}
       groups :
         - system : bootstrappers
         - system : nodes
+        
+        
+        
