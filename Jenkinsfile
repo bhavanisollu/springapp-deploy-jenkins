@@ -14,7 +14,7 @@ pipeline{
         stage('Build Docker Image') {
             steps {
                 script {
-                  bat 'docker build -t bhavani005/springboot-demo .'
+                  bat 'docker build -t bhavani005/demo-private .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline{
                  withCredentials([string(credentialsId: 'bhavani005', variable: 'dokerhubcred')]) {
                     bat "docker login -u bhavani005 -p ${dokerhubcred}"
                  }  
-                 bat 'docker push bhavani005/springboot-demo'
+                 bat 'docker push bhavani005/demo-private'
                 }
             }
         }
