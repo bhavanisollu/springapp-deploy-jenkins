@@ -16,7 +16,7 @@ spec :
     spec:
       containers:
       - name : welcome-pod
-        image : bhavani005/springboot-demo
+        image : bhavani005/demo-private
         ports :
         - containerPort : 8088
         env :
