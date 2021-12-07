@@ -19,17 +19,20 @@ spec :
         image : bhavani005/demo-private
         ports :
         - containerPort : 8088
-        env :
-        - name : DOCKERHUB_USERNAME
-          valueFrom :
-            secretKeyRef :
-              name : demo-secret 
-              key : username
-        - name : DOCKERHUB_PASSWORD
-          valueFrom :
-            secretKeyRef :
-              name : demo-secret 
-              key : password
+      imagePullSecrets :
+      - name : demo-secret
+        
+#         env :
+#         - name : DOCKERHUB_USERNAME
+#           valueFrom :
+#             secretKeyRef :
+#               name : demo-secret 
+#               key : username
+#         - name : DOCKERHUB_PASSWORD
+#           valueFrom :
+#             secretKeyRef :
+#               name : demo-secret 
+#               key : password
 ---
 apiVersion : v1
 kind : Service
