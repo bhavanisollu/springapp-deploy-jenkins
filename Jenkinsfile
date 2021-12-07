@@ -36,7 +36,7 @@ pipeline{
                      // kubernetesDeploy(configs:"deploymentAndService.yaml" , kubeconfigId : "jenkins-deploy-kubernetes-id")
                     
                     try{
-                    
+                    bat 'kubectl create secret generic demo-secret --from-file=.dockerconfigjson=\users\pavan\.docker\config.json --type kubernetes.io/dockerconfigjson'
                     bat 'kubectl apply -f deployment.yaml'
                     }
                     catch(error){
