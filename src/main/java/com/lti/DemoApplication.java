@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@GetMapping("/demo")
 	public String getMessage() {
-		return "Welcome to jenkins CI/CD pipeline.\nGithub Webhook trigger added for triggering automatic build. Good Bye.";
+		return "Welcome to jenkins CI/CD pipeline.\nGithub Webhook trigger added for triggering automatic build. Good Bye.New line Added to test";
 	}
 
 	public static void main(String[] args) {
