@@ -15,7 +15,7 @@ spec :
         app : welcome-jenkins
     spec:
       containers:
-      - name : welcome-pod
+      - name : goodbye-pod
         image : bhavani005/springboot-demo
         ports :
         - containerPort : 8088
