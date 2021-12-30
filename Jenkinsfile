@@ -42,6 +42,7 @@ pipeline{
                     catch(error){
                    // bat 'kubectl create -f secret.yaml'
                     bat 'kubectl create -f deployment.yaml'
+                        
                     }  
                 }
             }
