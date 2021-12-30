@@ -11,7 +11,7 @@ public class DemoApplication {
 	
 	@GetMapping("/demo")
 	public String getMessage() {
-		return "Welcome to jenkins CI/CD pipeline.On Minikube cluster";
+		return "Welcome to jenkins CI/CD pipeline.On Minikube cluster. A single node cluster.";
 	}
 
 	public static void main(String[] args) {
