@@ -36,12 +36,12 @@ pipeline{
                     
                     try{
                     //bat 'kubectl create secret generic demo-secret --from-file=.dockerconfigjson=config.json --type kubernetes.io/dockerconfigjson'
-                     bat 'kubectl create -f deployment.yaml'
+                     bat 'kubectl apply -f deployment.yaml'
                    
                     }
                     catch(error){
                    // bat 'kubectl create -f secret.yaml'
-                    bat 'kubectl apply -f deployment.yaml'
+                    bat 'kubectl create -f deployment.yaml'
                     }  
                 }
             }
